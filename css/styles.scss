@@ -1,0 +1,17 @@
+@import '_variables';
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#home {
+	height: 100vh;
+	background: $darkblue;
+	.home-text-box {
+		padding-top: 34vh;
+		text-align: center;
+		color: #fff;
+		text-shadow: 2px 2px 1px #000;
+	}
+}
