@@ -8,9 +8,13 @@
 		width: 70%;
 		height: 48px;
 		background-color: $lightblue;
+		display: flex;
+		justify-content: space-around;
 		a {
-			float: left;
-			display: block;
+			// float: left;
+			// display: block;
+			flex: 1;
+			flex-basis: 0;
 			color: #f2f2f2;
 			text-align: center;
 			padding: 14px 16px;
@@ -23,6 +27,9 @@
 				background-color: $navyblue;
 				color: white;
 			}
+		}
+		a:first-child {
+			flex: 1.6;
 		}
 	}
 }
