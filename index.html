@@ -11,12 +11,12 @@
 <body>
 
 <!-- Home -->
-	<div id="home">
+	<div id="home" class="navsec">
 		<div class="home-text-box">
 			<h1>Hello, I'm <span class="emphasized">Lucas Lombardo</span></h1>
 			<h3>I'm a Front-end Web Developer</h3>
 			<div>
-				<button><a href="#about-anchor" id='smooth-scroll'>Continue</a></button>
+				<button><a href="#about-anchor" id='smooth-scroll' class="anchor-btn">Continue</a></button>
 			</div>
 			<br>
 			<br>
@@ -26,18 +26,18 @@
 <!-- Navbar -->
 	<div class="navbar">
 		<div class="content">
-			<a class="active" href="#">Lucas Lombardo</a>
-			<a href="#">About</a>
-			<a href="#">Projects</a>
-			<a href="#">Skills</a>
-			<a href="#">Education</a>
-			<a href="#">Contact</a>
+			<a class= "active anchor-btn" href="#home">Lucas Lombardo</a>
+			<a class = "anchor-btn" href="#about-anchor">About</a>
+			<a class = "anchor-btn" href="#projects-anchor">Projects</a>
+			<a class = "anchor-btn" href="#skills-anchor">Skills</a>
+			<a class = "anchor-btn" href="#education-anchor">Education</a>
+			<a class = "anchor-btn" href="#contact-anchor">Contact</a>
 		</div>
 	</div>
 
 <!-- About -->
 	<span class="anchor" id="about-anchor"></span>
-	<div id="about">
+	<div id="about" class="section navsec">
 		<div class="container">
 			<div class="text">
 				<h2>About</h2>
@@ -56,7 +56,7 @@
 
 <!-- Projects -->
 	<span class="anchor" id="projects-anchor"></span>
-	<div id="projects">
+	<div id="projects" class="section navsec">
 		<div class="container">
 			<h2>Projects</h2>
 			<hr>
@@ -71,14 +71,14 @@
 
 <!-- Skills -->
 	<span class="anchor" id="skills-anchor"></span>
-	<div id="skills">
+	<div id="skills" class="section navsec">
 		<div class="container">
 			<h2>Skills</h2>
 		</div>
 	</div>
 <!-- Education -->
 	<span class="anchor" id="education-anchor"></span>
-	<div id="education">
+	<div id="education" class="section navsec">
 		<div class="container">
 			<h2>Education</h2>
 		</div>
@@ -86,7 +86,7 @@
 
 <!-- Contact -->
 	<span class="anchor" id="contact-anchor"></span>
-	<div id="contact">
+	<div id="contact" class="section navsec">
 		<div class="container">
 			<h2>Contact</h2>
 		</div>
@@ -98,6 +98,7 @@
 	</div>
 
 <!-- Scripts -->
-	<script type="text/javascript" src="js/portfolioSite.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/portfolioSite2.js"></script>
 </body>
 </html>

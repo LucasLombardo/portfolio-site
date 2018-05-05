@@ -4,26 +4,38 @@
 
 /*! begin website styling */
 
-* {
-	padding: 0;
-	margin: 0;
-}
+// Global Styles
 
 body {
 	background: $offwhite;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
 		'Helvetica Neue', sans-serif;
+	// Scrolling effect on anchor links
 	&.in-transition {
 		transition: transform 900ms ease;
 	}
 }
 
 .anchor {
+	// Adjust anchor points for sticky nav height
 	display: block;
 	height: $navheight;
 	margin-top: -$navheight;
 	visibility: hidden;
 }
+
+.section {
+	width: 70%;
+	margin: 0 auto;
+	background: lighten($offwhite, 20%);
+	padding: 20px 0px;
+}
+
+.container {
+	margin: 0 8%;
+}
+
+// Section Styling
 
 #home {
 	height: 100vh;
@@ -44,8 +56,9 @@ body {
 			color: #fff;
 			text-decoration: none;
 		}
+		// REVISIT - MESSY BUTTON STYLING
 		button {
-			margin-top: 25px;
+			margin-top: 5px;
 			background-color: transparent;
 			width: 150px;
 			height: 40px;
@@ -81,9 +94,7 @@ body {
 }
 
 #about {
-	width: 70%;
-	margin: 0 auto;
-	background: lighten($offwhite, 20%);
+	padding: 0;
 	.container {
 		padding: 20px 0px;
 		display: -webkit-flex;
@@ -139,9 +150,6 @@ body {
 #projects {
 	background-color: lighten($offwhite, 17%);
 	height: 130vh;
-	width: 70%;
-	margin: 0 auto;
-	padding-top: 20px;
 	h2 {
 		font-size: 4em;
 		text-align: center;
@@ -171,38 +179,24 @@ body {
 }
 
 #skills {
-	background-color: lighten($offwhite, 20%);
 	height: 100vh;
-	width: 70%;
-	margin: 0 auto;
-	padding-top: 20px;
 }
 
 #education {
-	background-color: lighten($offwhite, 20%);
 	height: 100vh;
-	width: 70%;
-	margin: 0 auto;
-	padding-top: 20px;
 }
 
 #contact {
-	background-color: lighten($offwhite, 20%);
 	height: 100vh;
-	width: 70%;
-	margin: 0 auto;
-	padding-top: 20px;
 }
 
 #footer {
 	width: 70%;
 	margin: 0 auto;
-	padding: 10px 0;
+	padding: 2px 0;
 	background-color: $navyblue;
 	color: #fff;
 	text-align: center;
 }
 
-.container {
-	margin: 0 8%;
-}
+

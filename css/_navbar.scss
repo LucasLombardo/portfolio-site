@@ -6,7 +6,7 @@
 	.content {
 		margin: 0 auto;
 		width: 70%;
-		height: 48px;
+		height: $navheight;
 		background-color: $lightblue;
 		display: flex;
 		justify-content: space-around;
@@ -34,7 +34,6 @@
 	}
 }
 
-// Make navbar sticky
 .sticky {
 	position: fixed;
 	top: 0;
