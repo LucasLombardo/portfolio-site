@@ -32,6 +32,6 @@
 	position: fixed;
 	top: 0;
 }
-.sticky + #about {
-	padding-top: 48px;
+.sticky + #about-anchor {
+	padding-top: $navheight;
 }

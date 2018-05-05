@@ -1,3 +1,11 @@
+window.onload = function addTransitions() {
+	setTimeout(function() {
+		document.querySelector('button').classList.add('loaded');
+	}, 100);
+};
+
+//Scroll Logic - NEEDS IMPROVEMENTS
+
 window.onscroll = function() {
 	myFunction();
 };

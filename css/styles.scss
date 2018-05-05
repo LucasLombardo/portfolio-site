@@ -12,24 +12,73 @@ body {
 		'Helvetica Neue', sans-serif;
 }
 
+.anchor {
+	display: block;
+	height: $navheight;
+	margin-top: -$navheight;
+	visibility: hidden;
+}
+
 #home {
 	height: 100vh;
 	background: $navyblue;
 	.home-text-box {
 		padding-top: 34vh;
+		font-size: 1.5em;
 		text-align: center;
 		color: #fff;
 		text-shadow: 2px 2px 1px #000;
+		span {
+			color: $lightblue;
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+		button {
+			margin-top: 15px;
+			background-color: transparent;
+			width: 150px;
+			height: 40px;
+			color: #fff;
+			text-decoration: none;
+			border-color: #fff;
+			border-radius: 2px;
+			font-size: 0.8em;
+			&.loaded {
+				-o-transition: 0.5s;
+				-ms-transition: 0.5s;
+				-moz-transition: 0.5s;
+				-webkit-transition: 0.5s;
+				transition: 0.5s;
+			}
+			&:hover {
+				background-color: $lightnavy;
+			}
+			&:focus {
+				outline: none;
+				border-color: #fff;
+			}
+			&:active {
+				outline: none;
+				border-color: #fff;
+			}
+			&:visited {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
 	}
 }
 
 #about {
 	width: 70%;
-	height: 130vh;
 	margin: 0 auto;
-	padding-top: 20px;
 	background: lighten($offwhite, 20%);
 	.container {
+		padding: 20px 0px;
+		display: -webkit-flex;
+		display: flex;
 		.text {
 			flex-grow: 1;
 			flex-basis: 0;
@@ -78,8 +127,40 @@ body {
 	}
 }
 
+#projects {
+	background-color: lighten($offwhite, 17%);
+	height: 130vh;
+	width: 70%;
+	margin: 0 auto;
+	padding-top: 20px;
+	h2 {
+		font-size: 4em;
+		text-align: center;
+		color: $navyblue;
+	}
+	hr {
+		margin: 15px 20px;
+		border: 0;
+		height: 2px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $navyblue, rgba(0, 0, 0, 0));
+	}
+	.project-grid {
+		display: -webkit-flex;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		.project {
+			height: 300px;
+			margin: 10px;
+			flex: 40%;
+			background-color: lighten($offwhite, 20%);
+			border: 2px solid lighten($offwhite, 10%);
+			border-radius: 5%;
+		}
+	}
+}
+
 .container {
 	margin: 0 8%;
-	display: -webkit-flex;
-	display: flex;
 }
