@@ -16,7 +16,6 @@ $(document).ready(function() {
 		var target = $(this).attr('href'); // Set the target as variable
 		var targetScroll = $(target).offset().top;
 		if (targetScroll == window.innerHeight - navheight) targetScroll += navheight;
-		console.log(targetScroll);
 
 		// perform animated scrolling by getting top-position of target-element and set it as scroll target
 		$('html, body')
@@ -70,7 +69,6 @@ document.addEventListener(
 			lineColor: '#aaabb8'
 		});
 		var intro = document.getElementById('intro');
-		intro.style.marginTop = -intro.offsetHeight / 2 + 'px';
 	},
 	false
 );
