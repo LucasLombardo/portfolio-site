@@ -39,13 +39,25 @@ body {
 
 #home {
 	height: 100vh;
-	background: $navyblue;
+	background-color: $navyblue;
 	.home-text-box {
-		padding-top: 34vh;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: 100vh;
 		font-size: 1.5em;
 		text-align: center;
 		color: #fff;
 		text-shadow: 2px 2px 1px #000;
+		z-index: 1;
+		.vertical-align {
+			display: inline-block;
+			width: 100%;
+			padding-bottom: 60px;
+		}
 		span {
 			color: $lightblue;
 		}
@@ -55,42 +67,27 @@ body {
 		a {
 			color: #fff;
 			text-decoration: none;
-		}
-		// REVISIT - MESSY BUTTON STYLING
-		button {
-			margin-top: 5px;
-			background-color: transparent;
-			width: 150px;
-			height: 40px;
-			color: #fff;
-			text-decoration: none;
-			border-color: #fff;
+			border: 1px solid #fff;
+			padding: 2px 8px 6px 8px;
+			background: rgba(0, 0, 0, 0.1);
 			border-radius: 2px;
-			font-size: 0.8em;
-			&.loaded {
-				-o-transition: 0.5s;
-				-ms-transition: 0.5s;
-				-moz-transition: 0.5s;
-				-webkit-transition: 0.5s;
-				transition: 0.5s;
-			}
+			-o-transition: 0.5s;
+			-ms-transition: 0.5s;
+			-moz-transition: 0.5s;
+			-webkit-transition: 0.5s;
+			transition: 0.5s;
 			&:hover {
-				background-color: $lightnavy;
-			}
-			&:focus {
-				outline: none;
-				border-color: #fff;
-			}
-			&:active {
-				outline: none;
-				border-color: #fff;
-			}
-			&:visited {
-				color: #fff;
-				text-decoration: none;
+				background-color: rgba(255, 255, 255, 0.2);
 			}
 		}
 	}
+}
+
+#particles {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	overflow: hidden;
 }
 
 #about {
@@ -198,5 +195,3 @@ body {
 	color: #fff;
 	text-align: center;
 }
-
-

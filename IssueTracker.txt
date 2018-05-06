@@ -2,8 +2,6 @@ Issue Tracker
 =============
 -Nav needs media query at 1024 and hamburger for mobile
 -Project Grid should break to 1 per line @ 1024
--Sections should have class, common css to be refactored
--Nav should change selected on scroll
--Smooth scroll up not working
--Nav dissapears on smooth scroll
 -Button on homepage still has indent shading, not fully clickable. May be better as an <a>
+-Refactor JS for readability
+-particleground gets weird when moving from contact to home
