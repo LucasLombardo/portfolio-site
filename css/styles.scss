@@ -150,7 +150,6 @@ a {
 
 #projects {
 	background-color: lighten($offwhite, 17%);
-	height: 100vh;
 	h2 {
 		margin: 10px 0 40px 0;
 		font-size: 4em;
@@ -249,7 +248,109 @@ a {
 }
 
 #skills {
-	height: 100vh;
+	padding: 0;
+	//triangle section title
+	.triangle-container {
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+	}
+	.triangle-title {
+		background-color: $navyblue;
+		background-size: cover;
+		height: 160px;
+		color: white;
+		h2 {
+			font-size: 3.8em;
+			margin: 0;
+			padding: 14px 0 0 24px;
+		}
+	}
+	.skills-content {
+		background-color: lighten($offwhite, 22%);
+		padding: 10% 8%;
+		position: relative;
+	}
+	.skills-content > div {
+		position: relative;
+		z-index: 1;
+	}
+	.skills-content:before {
+		content: '';
+		background-color: lighten($offwhite, 22%);
+		position: absolute;
+		height: 100%;
+		width: 120%;
+		top: -40%;
+		left: -10%;
+		transform: rotate(-5deg);
+		z-index: 0;
+	}
+	//content
+	.container {
+		position: relative;
+		margin: -28% 8% 0 8%;
+		display: flex;
+		z-index: 2;
+		.skills-col1 {
+			width: 60%;
+			// border: 1px solid red;
+			h3 {
+				color: $navyblue;
+				text-align: center;
+				font-size: 1.4em;
+				&:first-of-type {
+					padding-top: 20px;
+				}
+			}
+			.skill-box {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				margin: 15px 20px 15px 0;
+				padding: 10px 0;
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+				.skill {
+					width: 21%;
+					margin: 0 5%;
+					// border: 1px solid red;
+					img {
+						width: 60%;
+						display: block;
+						margin: 5px auto 0 auto;
+					}
+					h4 {
+						color: $navyblue;
+						text-align: center;
+						font-size: 1.2em;
+						margin: 0 0 5px 0;
+					}
+				}
+			}
+		}
+		.skills-col2 {
+			width: 40%;
+			padding: 0 0 0 20px;
+			// border-left: 2px dashed $navyblue;
+			// border: 1px solid red;
+			img {
+				width: 40%;
+				display: block;
+				margin: 0 auto;
+			}
+			h3 {
+				color: $navyblue;
+				text-align: center;
+				font-size: 1.4em;
+				margin: 10px 0 0 0;
+			}
+			p {
+				margin: 6px 0 18px 0;
+				text-align: center;
+				font-size: 1.2em;
+			}
+		}
+	}
 }
 
 #education {

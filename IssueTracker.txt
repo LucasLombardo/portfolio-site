@@ -5,3 +5,5 @@ Issue Tracker
 -Button on homepage still has indent shading, not fully clickable. May be better as an <a>
 -Refactor JS for readability
 -particleground gets weird when moving from contact to home
+-make a variable for all box shadows
+-hr style should be refactored to global
