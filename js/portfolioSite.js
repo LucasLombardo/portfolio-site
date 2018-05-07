@@ -34,7 +34,7 @@ $(document).ready(function() {
 $(window)
 	.scroll(function() {
 		var scrollDistance = $(window).scrollTop();
-
+		//highlight active section
 		$('.navsec').each(function(i) {
 			if ($(this).position().top - navheight - 2 <= scrollDistance) {
 				$('.navbar a.active').removeClass('active');
@@ -43,6 +43,11 @@ $(window)
 					.addClass('active');
 			}
 		});
+		//if at bottom of the page, highlight contact
+		if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+			$('.navbar a.active').removeClass('active');
+			$('.navbar a:last-of-type').addClass('active');
+		}
 	})
 	.scroll();
 
