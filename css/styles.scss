@@ -249,6 +249,7 @@ a {
 
 #skills {
 	padding: 0;
+	border-bottom: 3px dashed $navyblue;
 	//triangle section title
 	.triangle-container {
 		overflow: hidden;
@@ -290,6 +291,7 @@ a {
 	.container {
 		position: relative;
 		margin: -28% 8% 0 8%;
+		padding-bottom: 3%;
 		display: flex;
 		z-index: 2;
 		.skills-col1 {
@@ -354,11 +356,164 @@ a {
 }
 
 #education {
-	height: 100vh;
+	background-color: lighten($offwhite, 26%);
+	padding-bottom: 5%;
+	h2 {
+		margin: 10px 0 40px 0;
+		font-size: 4em;
+		text-align: center;
+		color: $navyblue;
+	}
+	hr {
+		margin: 15px 20px;
+		border: 0;
+		height: 2px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $navyblue, rgba(0, 0, 0, 0));
+	}
+	.school-box {
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+		padding: 20px 5%;
+		margin: 10px 0 20px 0;
+		background-color: lighten($offwhite, 30%);
+		.school-name {
+			display: inline;
+		}
+		.school-dates {
+			float: right;
+			margin: 0;
+		}
+	}
+}
+
+#triangle-transition {
+	position: absolute;
+	overflow: hidden;
+	width: 70%;
+	left: 0;
+	right: 0;
+	margin: -40px auto 0 auto;
+	section {
+		position: relative;
+		padding: 20px;
+		background: lighten($offwhite, 22%); //background of section below
+		color: #fff;
+		text-align: center;
+	}
+	.triangles {
+		background: lighten($offwhite, 26%);
+	}
+	/* Triangles */
+	.triangles::before,
+	.triangles::after {
+		position: absolute;
+		content: '';
+		pointer-events: none;
+		left: 50%;
+		width: 50px;
+		height: 50px;
+		-webkit-transform: translateX(-50%) rotate(45deg);
+		transform: translateX(-50%) rotate(45deg);
+	}
+	.triangles::after {
+		bottom: -25px;
+		z-index: 10;
+		background: inherit;
+		box-shadow: -50px 50px 0 lighten($offwhite, 26%), 50px -50px 0 lighten($offwhite, 26%);
+	}
 }
 
 #contact {
-	height: 100vh;
+	//set up triangle transition
+	position: relative;
+	overflow: hidden;
+	width: 70%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 3;
+	//content formatting
+	background: lighten($navyblue, 30%);
+	min-height: 80vh;
+	.container {
+		margin: 0 20%;
+		h2 {
+			margin: 5% 0 15px 0;
+			font-size: 4em;
+			text-align: center;
+			color: lighten($offwhite, 26%);
+		}
+		h3 {
+			color: lighten($offwhite, 26%);
+			text-align: center;
+			font-size: 1.5em;
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+		hr {
+			margin: 30px 0;
+			border: 0;
+			height: 2px;
+			background-image: linear-gradient(to right, rgba(0, 0, 0, 0), lighten($offwhite, 26%), rgba(0, 0, 0, 0));
+		}
+		form {
+			input,
+			textarea {
+				width: 95%;
+				height: 30px;
+				padding: 5px 10px;
+				font-size: 1.3em;
+				color: #999;
+				background: lighten($offwhite, 26%);
+				border: 2px solid lighten($navyblue, 20%);
+				margin-bottom: 25px;
+				-webkit-transition: all 0.1s ease-in-out;
+				-moz-transition: all 0.1s ease-in-out;
+				-ms-transition: all 0.1s ease-in-out;
+				-o-transition: all 0.1s ease-in-out;
+				transition: all 0.1s ease-in-out;
+			}
+			input:focus,
+			textarea:focus {
+				border: 2px solid $navyblue;
+				color: $navyblue;
+				background-color: lighten($offwhite, 32%);
+			}
+			textarea {
+				height: 200px;
+				resize: none;
+				padding-top: 10px;
+			}
+			div {
+				text-align: center;
+			}
+			.submit {
+				width: 33%;
+				padding: 5px 10px;
+				margin-bottom: 25px;
+				font-size: 1.3em;
+				background: lighten($navyblue, 30%);
+				height: 40px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: lighten($offwhite, 26%);
+				border: 2px solid lighten($offwhite, 26%);
+				-webkit-transition: all 0.1s ease-in-out;
+				-moz-transition: all 0.1s ease-in-out;
+				-ms-transition: all 0.1s ease-in-out;
+				-o-transition: all 0.1s ease-in-out;
+				transition: all 0.1s ease-in-out;
+			}
+			.submit:hover {
+				color: #fff;
+				border: 2px solid lighten($navyblue, 20%);
+				background: $navyblue;
+				cursor: pointer;
+			}
+			.required {
+				color: #b43838;
+			}
+		}
+	}
 }
 
 #footer {
