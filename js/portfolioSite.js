@@ -3,12 +3,8 @@ window.onload = setTimeout(function addLoadedClass() {
 	$('button').addClass('loaded');
 }, 20);
 
-//smooth scrolling with actives
-//Elena Scherer
-//https://codepen.io/eksch/pen/qdbaxy
-
 var navheight = 48;
-
+//smooth scrolling
 $(document).ready(function() {
 	$('.anchor-btn').bind('click', function(e) {
 		e.preventDefault(); // prevent hard jump, the default behavior
@@ -31,22 +27,27 @@ $(document).ready(function() {
 	});
 });
 
+//set actives
 $(window)
 	.scroll(function() {
 		var scrollDistance = $(window).scrollTop();
 		//highlight active section
 		$('.navsec').each(function(i) {
 			if ($(this).position().top - navheight - 2 <= scrollDistance) {
-				$('.navbar a.active').removeClass('active');
-				$('.navbar a')
-					.eq(i)
+				$('.nav-links a.active').removeClass('active');
+				$('.nav-links a')
+					.eq(i - 1)
 					.addClass('active');
 			}
 		});
 		//if at bottom of the page, highlight contact
 		if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-			$('.navbar a.active').removeClass('active');
-			$('.navbar a:last-of-type').addClass('active');
+			$('.nav-links a.active').removeClass('active');
+			$('.nav-links a:last-of-type').addClass('active');
+		}
+		//if above navbar, highlight none
+		if (window.innerHeight > window.scrollY) {
+			$('.nav-links a.active').removeClass('active');
 		}
 	})
 	.scroll();
@@ -57,13 +58,37 @@ window.onscroll = function() {
 };
 
 function stickNav() {
-	var navbar = document.querySelector('.navbar');
+	var navbar = document.querySelector('.nav');
 	if (window.pageYOffset >= window.innerHeight) {
 		navbar.classList.add('sticky');
 	} else {
 		navbar.classList.remove('sticky');
 	}
 }
+
+//make nav menu collapse on link click
+function collapseNav() {
+	$('#nav-check').prop('checked', false);
+}
+
+//contact form
+// function SubForm(e) {
+// 	e.preventDefault();
+// 	var url = $(this)
+// 			.closest('form')
+// 			.attr('action'),
+// 		data = $(this)
+// 			.closest('form')
+// 			.serialize();
+// 	$.ajax({
+// 		url: url,
+// 		type: 'post',
+// 		data: data,
+// 		success: function() {
+// 			//whatever you wanna do after the form is successfully submitted
+// 		}
+// 	});
+// }
 
 //particleground
 document.addEventListener(

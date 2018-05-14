@@ -1,43 +1,107 @@
-// Format Navbar
-.navbar {
-	overflow: hidden;
-	width: 100%;
-	z-index: 99;
-	.content {
-		margin: 0 auto;
-		width: 70%;
-		height: $navheight;
+.nav {
+	height: 50px;
+	width: 70%;
+	min-width: 320px;
+	background-color: $lightblue;
+	position: relative;
+	margin: 0 auto;
+	z-index: 90;
+}
+
+.nav > .nav-header {
+	display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+	display: inline-block;
+	position: relative;
+	font-size: 22px;
+	color: #fff;
+	padding: 12px 10px 12px 10px;
+	> a {
+		position: relative;
+		color: #fff;
+	}
+}
+
+.nav > .nav-btn {
+	display: none;
+}
+
+.nav > .nav-links {
+	display: inline;
+	float: right;
+	font-size: 18px;
+}
+
+.nav > .nav-links > a {
+	display: inline-block;
+	padding: 13px 10px 13px 10px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.nav > .nav-links > a:hover {
+	background-color: $lightnavy;
+}
+
+.nav > #nav-check {
+	display: none;
+}
+
+@media (max-width: 865px) {
+	.nav > .nav-btn {
+		display: inline-block;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+	.nav > .nav-btn > label {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		padding: 13px;
+	}
+	.nav > .nav-btn > label > span {
+		display: block;
+		width: 25px;
+		height: 10px;
+		border-top: 2px solid #eee;
+	}
+	.nav > .nav-links {
+		position: absolute;
+		display: block;
+		width: 100%;
 		background-color: $lightblue;
-		display: flex;
-		justify-content: space-around;
-		a {
-			// float: left;
-			// display: block;
-			flex: 1;
-			flex-basis: 0;
-			color: #f2f2f2;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 17px;
-			&:hover {
-				background-color: $lightnavy;
-			}
-			&.active {
-				background-color: $navyblue;
-				color: white;
-			}
-		}
-		a:first-child {
-			flex: 1.6;
-		}
+		height: 0px;
+		transition: all 0.3s ease-in;
+		overflow-y: hidden;
+		top: 50px;
+		left: 0px;
+	}
+	.nav > .nav-links > a {
+		display: block;
+		width: 100%;
+	}
+	.nav > #nav-check:not(:checked) + .nav-links {
+		height: 0px;
+	}
+	.nav > #nav-check:checked + .nav-links {
+		height: calc(100vh - 50px);
+		overflow-y: auto;
 	}
 }
 
 .sticky {
 	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
 }
 .sticky + #about-anchor {
 	padding-top: $navheight;
+}
+
+.active {
+	background-color: $navyblue;
 }

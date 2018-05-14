@@ -1,9 +1,22 @@
 Issue Tracker
 =============
+
+Mobile Responsiveness
+
 -Nav needs media query at 1024 and hamburger for mobile
--Project Grid should break to 1 per line @ 1024
--Button on homepage still has indent shading, not fully clickable. May be better as an <a>
--Refactor JS for readability
+-Project Grid should break to 1 per line @ 768
+-jQuery broken
+-limit container to 1400px wide
+
+
+
+
+
 -particleground gets weird when moving from contact to home
 -make a variable for all box shadows
 -hr style should be refactored to global
+-make an icon for top tab bar
+
+
+-Button on homepage still has indent shading, not fully clickable. May be better as an <a>
+-Refactor JS for readability
