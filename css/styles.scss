@@ -30,6 +30,10 @@ a {
 
 .section {
 	width: 70%;
+	min-width: 320px;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 	margin: 0 auto;
 	background: lighten($offwhite, 22%);
 	padding: 20px 0px;
@@ -404,6 +408,10 @@ a {
 	position: absolute;
 	overflow: hidden;
 	width: 70%;
+	min-width: 320px;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 	left: 0;
 	right: 0;
 	margin: -40px auto 0 auto;
@@ -442,6 +450,10 @@ a {
 	position: relative;
 	overflow: hidden;
 	width: 70%;
+	min-width: 320px;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -533,6 +545,10 @@ a {
 
 #footer {
 	width: 70%;
+	min-width: 320px;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 	margin: 0 auto;
 	padding: 2px 0;
 	background-color: $navyblue;

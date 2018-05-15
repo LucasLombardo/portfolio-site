@@ -6,6 +6,9 @@
 	position: relative;
 	margin: 0 auto;
 	z-index: 90;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 }
 
 .nav > .nav-header {

@@ -3,6 +3,8 @@ window.onload = setTimeout(function addLoadedClass() {
 	$('button').addClass('loaded');
 }, 20);
 
+window.onload = stickNav();
+
 var navheight = 48;
 //smooth scrolling
 $(document).ready(function() {

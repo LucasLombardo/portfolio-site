@@ -3,7 +3,6 @@ Issue Tracker
 
 Mobile Responsiveness
 
--Nav needs media query at 1024 and hamburger for mobile
 -Project Grid should break to 1 per line @ 768
 -jQuery broken
 -limit container to 1400px wide
