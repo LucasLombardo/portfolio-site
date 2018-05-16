@@ -112,11 +112,15 @@ a {
 			}
 		}
 	}
-	#particles {
+	#particles-js {
+		position: absolute;
 		width: 100%;
 		height: 100vh;
-		position: absolute;
-		overflow: hidden;
+		background-color: #25274d;
+		background-image: url('');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
 	}
 }
 
