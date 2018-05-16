@@ -73,25 +73,6 @@ function collapseNav() {
 	$('#nav-check').prop('checked', false);
 }
 
-//contact form
-// function SubForm(e) {
-// 	e.preventDefault();
-// 	var url = $(this)
-// 			.closest('form')
-// 			.attr('action'),
-// 		data = $(this)
-// 			.closest('form')
-// 			.serialize();
-// 	$.ajax({
-// 		url: url,
-// 		type: 'post',
-// 		data: data,
-// 		success: function() {
-// 			//whatever you wanna do after the form is successfully submitted
-// 		}
-// 	});
-// }
-
 //particleground
 document.addEventListener(
 	'DOMContentLoaded',
@@ -104,3 +85,27 @@ document.addEventListener(
 	},
 	false
 );
+
+//handle form submission
+$('#contact-form').submit(function(evt) {
+	evt.preventDefault(); //prevents the default action
+	var data = $(this)
+		.closest('form')
+		.serialize();
+	$.ajax({
+		url: 'https://getsimpleform.com/messages?form_api_token=774c63f8bb6c2ffb17296de7f6d4dfdb',
+		type: 'post',
+		data: data,
+		success: function() {
+			console.log('Message successfully submitted.');
+			document.querySelector('#contact-form').reset();
+			$('#submit-success').fadeIn();
+		}
+	});
+});
+
+//hide success message on load and fade out when user clicks the x box
+$('#submit-success').hide();
+$('#success-close').click(function hideMsg() {
+	$('#submit-success').fadeOut();
+});

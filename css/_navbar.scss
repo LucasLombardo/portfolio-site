@@ -9,6 +9,9 @@
 	@media (max-width: 768px) {
 		width: 100%;
 	}
+	a:last-of-type {
+		margin-right: 4px;
+	}
 }
 
 .nav > .nav-header {

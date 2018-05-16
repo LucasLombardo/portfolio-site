@@ -317,11 +317,14 @@
 			<h3>Thanks for checking out my website!</h3>
 			<h3>Please feel free to contact me with any questions or opportunities</h3>
 			<hr>
-			<form action="https://getsimpleform.com/messages?form_api_token=774c63f8bb6c2ffb17296de7f6d4dfdb" method="post">
-				<input type='hidden' name='redirect_to' value='http://google.com/' />
+			<form id="contact-form">
 				<input type="text" name="name" placeholder="NAME" required>
 				<input  type="email" name="email" placeholder="EMAIL" required>
 				<textarea name="content" placeholder="MESSAGE" required ></textarea>
+				<div id="submit-success">
+					<div id="success-close"><p>x</p></div>
+					<strong>Thank you! Your message was submitted successfully.</strong>
+				</div>
 				<div><button name="send" type="submit" class="submit">SEND</button></div>
 			</form>
 		</div>

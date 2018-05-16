@@ -535,6 +535,30 @@ a {
 			div {
 				text-align: center;
 			}
+			#submit-success {
+				color: lighten($offwhite, 26%);
+				width: 60%;
+				margin: 0 auto 20px auto;
+				padding: 4px;
+				border: 2px solid lighten($offwhite, 26%);
+				border-radius: 4px;
+				#success-close {
+					border: 1px solid lighten($offwhite, 26%);
+					width: 16px;
+					height: 16px;
+					float: right;
+					cursor: pointer;
+					p {
+						padding: 0;
+						margin: -3px 0 0 0;
+						-moz-user-select: none;
+						-khtml-user-select: none;
+						-webkit-user-select: none;
+						-ms-user-select: none;
+						user-select: none;
+					}
+				}
+			}
 			.submit {
 				width: 33%;
 				min-width: 120px;
