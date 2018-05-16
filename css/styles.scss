@@ -7,7 +7,29 @@
 // Global Styles
 
 body {
-	background: $offwhite;
+	background: rgb(170, 171, 184); /* Old browsers */
+	background: -moz-linear-gradient(
+		left,
+		rgba(170, 171, 184, 1) 0%,
+		rgba(230, 231, 247, 1) 33%,
+		rgba(230, 231, 247, 1) 69%,
+		rgba(170, 171, 184, 1) 100%
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		left,
+		rgba(170, 171, 184, 1) 0%,
+		rgba(230, 231, 247, 1) 33%,
+		rgba(230, 231, 247, 1) 69%,
+		rgba(170, 171, 184, 1) 100%
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to right,
+		rgba(170, 171, 184, 1) 0%,
+		rgba(230, 231, 247, 1) 33%,
+		rgba(230, 231, 247, 1) 69%,
+		rgba(170, 171, 184, 1) 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaabb8', endColorstr='#aaabb8',GradientType=1 ); /* IE6-9 */
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
 		'Helvetica Neue', sans-serif;
 	// Scrolling effect on anchor links
@@ -168,6 +190,7 @@ a {
 		.project {
 			margin: 10px;
 			flex: 40%;
+			min-width: 210px;
 			text-align: center;
 			background-color: lighten($offwhite, 22%);
 			border-radius: 2%;
@@ -290,10 +313,13 @@ a {
 		margin: -28% 8% 0 8%;
 		padding-bottom: 3%;
 		display: flex;
+		flex-wrap: wrap;
 		z-index: 2;
 		.skills-col1 {
 			width: 60%;
-			// border: 1px solid red;
+			@media (max-width: 640px) {
+				width: 100%;
+			}
 			h3 {
 				color: $navyblue;
 				text-align: center;
@@ -321,15 +347,18 @@ a {
 					h4 {
 						color: $navyblue;
 						text-align: center;
-						font-size: 1.2em;
+						font-size: 0.9em;
 						margin: 0 0 5px 0;
 					}
 				}
 			}
 		}
 		.skills-col2 {
-			width: 40%;
+			width: 35%;
 			padding: 0 0 0 20px;
+			@media (max-width: 640px) {
+				width: 100%;
+			}
 			// border-left: 2px dashed $navyblue;
 			// border: 1px solid red;
 			img {
@@ -358,7 +387,7 @@ a {
 	padding-bottom: 5%;
 	h2 {
 		margin: 10px 0 40px 0;
-		font-size: 4em;
+		font-size: 3.5em;
 		text-align: center;
 		color: $navyblue;
 	}
@@ -458,14 +487,14 @@ a {
 		margin: 0 20%;
 		h2 {
 			margin: 5% 0 15px 0;
-			font-size: 4em;
+			font-size: 3.5em;
 			text-align: center;
 			color: lighten($offwhite, 26%);
 		}
 		h3 {
 			color: lighten($offwhite, 26%);
 			text-align: center;
-			font-size: 1.4em;
+			font-size: 1.2em;
 			margin-left: 10%;
 			margin-right: 10%;
 		}
@@ -508,6 +537,7 @@ a {
 			}
 			.submit {
 				width: 33%;
+				min-width: 120px;
 				padding: 5px 10px;
 				margin-bottom: 25px;
 				font-size: 1.3em;
