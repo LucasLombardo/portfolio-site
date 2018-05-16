@@ -127,6 +127,8 @@ a {
 #about {
 	padding: 0;
 	.container {
+		overflow-y: overlay;
+		overflow-x: hidden;
 		padding: 20px 0px 40px 0px;
 		h2 {
 			font-size: 4em;
