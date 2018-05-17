@@ -2,20 +2,17 @@ Issue Tracker
 =============
 
 Mobile Responsiveness
+-uncentered skill section
 
--Project Grid should break to 1 per line @ 768
--jQuery broken
--limit container to 1400px wide
-
-
-
+Design feedback
+-make 3 middle sections have angled titles like Skills
+-get rid of outer white box on message submit
 
 
--particleground gets weird when moving from contact to home
+Cleaning up/readability
 -make a variable for all box shadows
 -hr style should be refactored to global
--make an icon for top tab bar
+-JS refactor
 
-
+Other
 -Button on homepage still has indent shading, not fully clickable. May be better as an <a>
--Refactor JS for readability

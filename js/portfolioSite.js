@@ -73,24 +73,14 @@ function collapseNav() {
 	$('#nav-check').prop('checked', false);
 }
 
-//handle form submission
-$('#contact-form').submit(function(evt) {
-	evt.preventDefault(); //prevents the default action
-	var data = $(this)
-		.closest('form')
-		.serialize();
-	$.ajax({
-		url: 'https://getsimpleform.com/messages?form_api_token=774c63f8bb6c2ffb17296de7f6d4dfdb',
-		type: 'post',
-		data: data,
-		success: function() {
-			console.log('Message successfully submitted.');
-			document.querySelector('#contact-form').reset();
-			$('#submit-success').fadeIn();
-		}
-	});
+//clear form and display success message on submission
+$('.submit').click(function submitForm() {
+	setTimeout(function() {
+		console.log('Message successfully submitted.');
+		document.querySelector('#contact-form').reset();
+		$('#submit-success').fadeIn();
+	}, 750);
 });
-
 //hide success message on load and fade out when user clicks the x box
 $('#submit-success').hide();
 $('#success-close').click(function hideMsg() {

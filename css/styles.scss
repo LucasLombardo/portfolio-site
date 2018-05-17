@@ -489,6 +489,9 @@ a {
 	//content formatting
 	background: lighten($navyblue, 30%);
 	min-height: 80vh;
+	iframe {
+		display: none;
+	}
 	.container {
 		margin: 0 20%;
 		h2 {
