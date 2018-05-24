@@ -175,99 +175,132 @@ a {
 
 #projects {
 	background-color: lighten($offwhite, 17%);
-	h2 {
-		margin: 10px 0 40px 0;
-		font-size: 4em;
-		text-align: center;
-		color: $navyblue;
+	padding: 0;
+	//triangle section title
+	.triangle-container {
+		overflow: hidden;
+		padding: 0;
+		position: relative;
 	}
-	hr {
-		margin: 15px 20px;
-		border: 0;
-		height: 2px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $navyblue, rgba(0, 0, 0, 0));
+	.triangle-title {
+		background-color: $navyblue;
+		background-size: cover;
+		height: 160px;
+		color: white;
+		h2 {
+			font-size: 3.8em;
+			margin: 0;
+			padding: 8px 0 0 24px;
+		}
 	}
-	.project-grid {
-		display: -webkit-flex;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		margin: 0 -10px;
-		.project {
-			margin: 10px;
-			flex: 40%;
-			min-width: 210px;
-			text-align: center;
-			background-color: lighten($offwhite, 22%);
-			border-radius: 2%;
-			h3 {
-				color: lighten($navyblue, 0.2);
-				font-size: 1.5em;
-				margin: 22px;
-			}
-			.img-container {
-				position: relative;
-				width: 90%;
-				margin: auto;
-				overflow: hidden;
-				border-radius: 1%;
-				.img-overlay {
-					background: rgba(0, 0, 0, 0.7);
-					position: absolute;
-					height: 99%;
-					width: 100%;
-					left: 0;
-					top: 0;
-					bottom: 0;
-					right: 0;
-					opacity: 0;
-					-webkit-transition: all 0.4s ease-in-out 0s;
-					-moz-transition: all 0.4s ease-in-out 0s;
-					transition: all 0.4s ease-in-out 0s;
+	.projects-content {
+		background-color: lighten($offwhite, 17%);
+		padding: 10% 8%;
+		position: relative;
+	}
+	.projects-content > div {
+		position: relative;
+		z-index: 1;
+	}
+	.projects-content:before {
+		content: '';
+		background-color: lighten($offwhite, 17%);
+		position: absolute;
+		height: 100%;
+		width: 120%;
+		top: -40%;
+		left: -10%;
+		transform: rotate(-5deg);
+		z-index: 0;
+	}
+
+	.container {
+		position: relative;
+		margin: -24% 8% 0 8%;
+		padding-bottom: 3%;
+		z-index: 2;
+		.project-grid {
+			display: -webkit-flex;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+			.project {
+				margin: 10px;
+				flex: 40%;
+				min-width: 210px;
+				text-align: center;
+				background-color: lighten($offwhite, 22%);
+				border-radius: 2%;
+				h3 {
+					color: lighten($navyblue, 0.2);
+					font-size: 1.5em;
+					margin: 22px;
 				}
-				&:hover .img-overlay {
-					opacity: 1;
-				}
-				&:hover .img-info {
-					top: 50%;
-					left: 50%;
-					opacity: 1;
-				}
-				img {
-					width: 100%;
-				}
-				.img-info {
-					position: absolute;
-					text-align: center;
-					padding-left: 1em;
-					padding-right: 1em;
-					width: 100%;
-					top: 80%;
-					left: 50%;
-					opacity: 0;
-					color: #fff;
-					-webkit-transform: translate(-50%, -50%);
-					-moz-transform: translate(-50%, -50%);
-					transform: translate(-50%, -50%);
-					-webkit-transition: all 0.3s ease-in-out 0s;
-					-moz-transition: all 0.3s ease-in-out 0s;
-					transition: all 0.3s ease-in-out 0s;
-					h3 {
-						margin-top: 0;
+				.img-container {
+					position: relative;
+					width: 90%;
+					margin: auto;
+					overflow: hidden;
+					border-radius: 1%;
+					.img-overlay {
+						background: rgba(0, 0, 0, 0.7);
+						position: absolute;
+						height: 99%;
+						width: 100%;
+						left: 0;
+						top: 0;
+						bottom: 0;
+						right: 0;
+						opacity: 0;
+						-webkit-transition: all 0.4s ease-in-out 0s;
+						-moz-transition: all 0.4s ease-in-out 0s;
+						transition: all 0.4s ease-in-out 0s;
+					}
+					&:hover .img-overlay {
+						opacity: 1;
+					}
+					&:hover .img-info {
+						top: 50%;
+						left: 50%;
+						opacity: 1;
+					}
+					img {
+						width: 100%;
+					}
+					.img-info {
+						position: absolute;
+						text-align: center;
+						padding-left: 1em;
+						padding-right: 1em;
+						width: 100%;
+						top: 80%;
+						left: 50%;
+						opacity: 0;
 						color: #fff;
-					}
-					p {
-						margin: 0 14%;
+						-webkit-transform: translate(-50%, -50%);
+						-moz-transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
+						-webkit-transition: all 0.3s ease-in-out 0s;
+						-moz-transition: all 0.3s ease-in-out 0s;
+						transition: all 0.3s ease-in-out 0s;
+						h3 {
+							margin-top: 0;
+							color: #fff;
+						}
+						p {
+							margin: 0 14%;
+						}
 					}
 				}
-			}
-			span {
-				background-color: lighten($offwhite, 12%);
-				padding: 3px 5px;
-				margin: 11px 3px 14px 3px;
-				border-radius: 3px;
-				display: inline-block;
-				font-size: 0.9em;
+				span {
+					background-color: lighten($offwhite, 12%);
+					padding: 3px 5px;
+					margin: 11px 3px 14px 3px;
+					border-radius: 3px;
+					display: inline-block;
+					font-size: 0.9em;
+				}
 			}
 		}
 	}
@@ -275,7 +308,6 @@ a {
 
 #skills {
 	padding: 0;
-	border-bottom: 3px dashed $navyblue;
 	//triangle section title
 	.triangle-container {
 		overflow: hidden;
@@ -323,16 +355,9 @@ a {
 		z-index: 2;
 		.skills-col1 {
 			width: 60%;
+			padding-top: 5%;
 			@media (max-width: 640px) {
 				width: 100%;
-			}
-			h3 {
-				color: $navyblue;
-				text-align: center;
-				font-size: 1.4em;
-				&:first-of-type {
-					padding-top: 20px;
-				}
 			}
 			.skill-box {
 				display: flex;
@@ -390,44 +415,76 @@ a {
 
 #education {
 	background-color: lighten($offwhite, 26%);
-	padding-bottom: 5%;
-	h2 {
-		margin: 10px 0 40px 0;
-		font-size: 3.5em;
-		text-align: center;
-		color: $navyblue;
+	padding: 0;
+	//triangle section title
+	.triangle-container {
+		overflow: hidden;
+		padding: 0;
+		position: relative;
 	}
-	hr {
-		margin: 15px 20px 25px 20px;
-		border: 0;
-		height: 2px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), $navyblue, rgba(0, 0, 0, 0));
-	}
-	.school-box {
-		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-		padding: 20px 5%;
-		margin: 10px 0 20px 0;
-		background-color: lighten($offwhite, 30%);
-		h4 {
-			font-size: 1.2em;
-			color: lighten($navyblue, 10%);
-		}
-		.school-name {
-			display: inline;
-		}
-		.school-dates {
-			float: right;
+	.triangle-title {
+		background-color: $navyblue;
+		background-size: cover;
+		height: 160px;
+		color: white;
+		h2 {
+			font-size: 3.8em;
 			margin: 0;
+			padding: 8px 0 0 24px;
 		}
-		h6 {
-			color: lighten($navyblue, 15%);
-			font-style: italic;
-			font-size: 0.9em;
-			margin: 10px 0 0 0;
-		}
-		li {
-			color: lighten($navyblue, 25%);
-			line-height: 1.4em;
+	}
+	.education-content {
+		background-color: lighten($offwhite, 26%);
+		padding: 10% 8%;
+		position: relative;
+	}
+	.education-content > div {
+		position: relative;
+		z-index: 1;
+	}
+	.education-content:before {
+		content: '';
+		background-color: lighten($offwhite, 26%);
+		position: absolute;
+		height: 100%;
+		width: 120%;
+		top: -40%;
+		left: -10%;
+		transform: rotate(-5deg);
+		z-index: 0;
+	}
+	//Content
+	.container {
+		position: relative;
+		margin: -24% 8% 0 8%;
+		padding-bottom: 3%;
+		z-index: 2;
+		.school-box {
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+			padding: 20px 5%;
+			margin: 10px 0 20px 0;
+			background-color: lighten($offwhite, 30%);
+			h4 {
+				font-size: 1.2em;
+				color: lighten($navyblue, 10%);
+			}
+			.school-name {
+				display: inline;
+			}
+			.school-dates {
+				float: right;
+				margin: 0;
+			}
+			h6 {
+				color: lighten($navyblue, 15%);
+				font-style: italic;
+				font-size: 0.9em;
+				margin: 10px 0 0 0;
+			}
+			li {
+				color: lighten($navyblue, 25%);
+				line-height: 1.4em;
+			}
 		}
 	}
 }
@@ -549,7 +606,7 @@ a {
 				width: 60%;
 				margin: 0 auto 20px auto;
 				padding: 4px;
-				border: 2px solid lighten($offwhite, 26%);
+				// border: 2px solid lighten($offwhite, 26%);
 				border-radius: 4px;
 				#success-close {
 					border: 1px solid lighten($offwhite, 26%);
