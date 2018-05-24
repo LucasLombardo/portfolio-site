@@ -231,6 +231,7 @@ a {
 				min-width: 210px;
 				text-align: center;
 				background-color: lighten($offwhite, 25%);
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 				border-radius: 2%;
 				h3 {
 					color: lighten($navyblue, 0.2);
