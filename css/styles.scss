@@ -230,7 +230,7 @@ a {
 				flex: 40%;
 				min-width: 210px;
 				text-align: center;
-				background-color: lighten($offwhite, 22%);
+				background-color: lighten($offwhite, 25%);
 				border-radius: 2%;
 				h3 {
 					color: lighten($navyblue, 0.2);
@@ -359,13 +359,23 @@ a {
 			@media (max-width: 640px) {
 				width: 100%;
 			}
+			h3 {
+				color: $navyblue;
+				@media (max-width: 640px) {
+					text-align: center;
+				}
+			}
 			.skill-box {
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-evenly;
-				margin: 15px 20px 15px 0;
+				background-color: lighten($offwhite, 25%);
 				padding: 10px 0;
 				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+				margin: 15px 40px 15px 0;
+				@media (max-width: 640px) {
+					margin: 15px auto;
+				}
 				.skill {
 					width: 21%;
 					margin: 0 5%;
@@ -389,13 +399,15 @@ a {
 			padding: 0 0 0 20px;
 			@media (max-width: 640px) {
 				width: 100%;
+				padding: 20px;
 			}
-			// border-left: 2px dashed $navyblue;
-			// border: 1px solid red;
 			img {
 				width: 40%;
 				display: block;
 				margin: 0 auto;
+				@media (max-width: 992px) {
+					width: 25%;
+				}
 			}
 			h3 {
 				color: $navyblue;
@@ -408,6 +420,9 @@ a {
 				margin: 6px 0 18px 0;
 				text-align: center;
 				font-size: 1.2em;
+				@media (max-width: 1280px) {
+					font-size: 1em;
+				}
 			}
 		}
 	}
@@ -457,7 +472,7 @@ a {
 	.container {
 		position: relative;
 		margin: -24% 8% 0 8%;
-		padding-bottom: 3%;
+		padding-bottom: 27px;
 		z-index: 2;
 		.school-box {
 			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);

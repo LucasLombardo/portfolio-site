@@ -74,7 +74,7 @@ function collapseNav() {
 }
 
 //clear form and display success message on submission
-$('.submit').click(function submitForm() {
+$('#contact-form').submit(function submitForm() {
 	setTimeout(function() {
 		console.log('Message successfully submitted.');
 		document.querySelector('#contact-form').reset();
