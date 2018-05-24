@@ -293,13 +293,17 @@ a {
 						}
 					}
 				}
-				span {
-					background-color: lighten($offwhite, 12%);
-					padding: 3px 5px;
-					margin: 11px 3px 14px 3px;
-					border-radius: 3px;
-					display: inline-block;
-					font-size: 0.9em;
+				.tech-tags {
+					margin: 11px 0 14px 0;
+					span {
+						background-color: lighten($offwhite, 12%);
+						padding: 3px 5px;
+						margin: 4px 3px;
+						border-radius: 3px;
+						display: inline-block;
+						vertical-align: middle;
+						font-size: 0.9em;
+					}
 				}
 			}
 		}
@@ -489,6 +493,20 @@ a {
 			.school-dates {
 				float: right;
 				margin: 0;
+				font-size: 0.8em;
+				padding-top: 5px;
+				@media (max-width: 900px) {
+					margin-top: 8px;
+					float: none;
+				}
+				@media (max-width: 768px) {
+					margin-top: 0;
+					float: right;
+				}
+				@media (max-width: 640px) {
+					margin-top: 8px;
+					float: none;
+				}
 			}
 			h6 {
 				color: lighten($navyblue, 15%);
@@ -563,6 +581,7 @@ a {
 	min-height: 80vh;
 	iframe {
 		display: none;
+		z-index: -1;
 	}
 	.container {
 		margin: 0 20%;
